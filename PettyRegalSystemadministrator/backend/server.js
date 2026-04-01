@@ -60,7 +60,7 @@ async function runMigrations() {
     await client.query(`ALTER TABLE products ADD COLUMN IF NOT EXISTS images JSONB DEFAULT '[]'`);
 
     // 🔥 Admin user
-    const newHash = await bcrypt.hash(process.env.ADMIN_PASSWORD || 'admin@123', 12);
+    const newHash = await bcrypt.hash(process.env.ADMIN_PASSWORD || '123456', 12);
 
     const existing = await client.query(
       'SELECT id FROM admin_users WHERE username = $1',
