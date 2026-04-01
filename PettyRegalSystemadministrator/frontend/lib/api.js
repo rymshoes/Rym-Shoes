@@ -1,4 +1,4 @@
-const SERVER_API = process.env.NEXT_PUBLIC_API_URL; // 🔥 مهم
+const SERVER_API = process.env.NEXT_PUBLIC_API_URL || 'https://rym-shoes.onrender.com/';مهم
 const CLIENT_API = '/api';
 
 function getApiBase() {
