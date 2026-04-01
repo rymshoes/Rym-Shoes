@@ -59,25 +59,17 @@ async function runMigrations() {
     await client.query(`ALTER TABLE products ADD COLUMN IF NOT EXISTS colors JSONB DEFAULT '[]'`);
     await client.query(`ALTER TABLE products ADD COLUMN IF NOT EXISTS images JSONB DEFAULT '[]'`);
 
-    // 🔥 Admin user
-    const newHash = await bcrypt.hash(process.env.ADMIN_PASSWORD || '123456', 12);
+   // 🧨 RESET ADMIN (حل نهائي)
+await client.query('DELETE FROM admin_users');
 
-    const existing = await client.query(
-      'SELECT id FROM admin_users WHERE username = $1',
-      ['admin']
-    );
+const newHash = await bcrypt.hash('123456', 10);
 
-    if (existing.rows.length === 0) {
-      await client.query(
-        'INSERT INTO admin_users (username, password_hash) VALUES ($1, $2)',
-        ['admin', newHash]
-      );
-    } else {
-      await client.query(
-        'UPDATE admin_users SET password_hash = $1 WHERE username = $2',
-        [newHash, 'admin']
-      );
-    }
+await client.query(
+  'INSERT INTO admin_users (username, password_hash) VALUES ($1, $2)',
+  ['admin', newHash]
+);
+
+console.log('✅ Admin reset: admin / 123456');
 
     await client.query('COMMIT');
     console.log('✅ Database ready');
