@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-const BACKEND = process.env.NEXT_PUBLIC_API_URL;
+const BACKEND = process.env.NEXT_PUBLIC_API_URL || 'https://rym-shoes.onrender.com/';
 
 const nextConfig = {
   reactStrictMode: true,
@@ -13,11 +13,6 @@ const nextConfig = {
   },
 
   async rewrites() {
-    if (!BACKEND) {
-      console.warn("⚠️ NEXT_PUBLIC_API_URL not defined");
-      return [];
-    }
-
     return [
       {
         source: '/api/:path*',
