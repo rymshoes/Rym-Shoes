@@ -56,6 +56,18 @@ export default function Footer() {
             </div>
 
             <div className="space-y-3">
+              <a
+                href="tel:+213540506385"
+                className="flex items-center gap-3 text-sm text-cream/60 hover:text-cream transition-colors group"
+              >
+                <span className="w-8 h-8 rounded-full border border-cream/20 flex items-center justify-center flex-shrink-0 group-hover:border-cream/50 transition-colors">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.16 6.16l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                </span>
+                <span dir="ltr">+213 540506385</span>
+              </a>
+
               <div className="flex items-start gap-3 text-sm text-cream/60">
                 <span>Biskra / Algérie</span>
               </div>
@@ -63,6 +75,20 @@ export default function Footer() {
 
             <div>
               <p className="text-[9px] tracking-[0.2em] text-cream/40 uppercase mb-3">Suivez-nous</p>
+              <div className="flex gap-3">
+                {socials.map(({ name, href, icon }) => (
+                  <a
+                    key={name}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={name}
+                    className="w-9 h-9 rounded-full border border-cream/20 flex items-center justify-center text-cream/50 hover:text-cream hover:border-cream/50 transition-all duration-300"
+                  >
+                    {icon}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
