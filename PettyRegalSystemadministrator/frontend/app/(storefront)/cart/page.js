@@ -59,7 +59,7 @@ export default function CartPage() {
                         <span className="px-4 py-2 text-sm border-x border-beige">{qty}</span>
                         <button onClick={() => updateQty(key, qty + 1)} className="px-3 py-2 text-warm-gray hover:text-warm-black transition-colors">+</button>
                       </div>
-                      <p className="font-semibold">{Math.round(parseFloat(product.price) * qty).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} دج</p>
+                      <p className="font-semibold">{Math.round(parseFloat(product.price) * qty).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} DA</p>
                     </div>
                     <button onClick={() => removeFromCart(key)} className="mt-3 text-[9px] tracking-widest uppercase text-warm-gray hover:text-warm-black underline underline-offset-2 transition-colors">
                       Remove
