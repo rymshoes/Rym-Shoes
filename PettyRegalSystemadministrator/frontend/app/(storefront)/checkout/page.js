@@ -204,7 +204,7 @@ export default function CheckoutPage() {
                 </div>
               ))}
               <div className="border-t border-beige pt-4 flex justify-between font-semibold">
-                <span>اTOTAL</span>
+                <span>TOTAL</span>
                 <span>{Math.round(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} DA</span>
               </div>
             </div>
