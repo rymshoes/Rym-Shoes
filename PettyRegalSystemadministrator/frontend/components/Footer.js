@@ -123,7 +123,7 @@ export default function Footer() {
 
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-cream/30 tracking-wider">
-            © 2025 Rym Shoes. Tous droits réservés.
+            © 2026 Rym Shoes. Tous droits réservés.
           </p>
           <div className="flex gap-6 text-xs text-cream/30">
             <a href="#" className="hover:text-cream transition-colors">Confidentialité</a>
