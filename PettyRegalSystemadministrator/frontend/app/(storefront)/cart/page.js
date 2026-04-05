@@ -76,11 +76,11 @@ export default function CartPage() {
             <div className="space-y-4 mb-8 text-sm">
               <div className="flex justify-between">
                 <span className="text-warm-gray">Subtotal ({count} items)</span>
-                <span>{Math.round(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} دج</span>
+                <span>{Math.round(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} DA</span>
               </div>
               <div className="border-t border-beige pt-4 flex justify-between font-semibold">
                 <span>Total</span>
-                <span>{Math.round(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} دج</span>
+                <span>{Math.round(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} DA</span>
               </div>
             </div>
             <Link href="/checkout" className="block w-full text-center btn-primary">
