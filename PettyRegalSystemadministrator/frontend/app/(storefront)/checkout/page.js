@@ -198,13 +198,13 @@ export default function CheckoutPage() {
                 <div key={key} className="flex justify-between items-start text-sm">
                   <div>
                     <p className="font-medium">{product.name}</p>
-                    <p className="text-warm-gray text-xs mt-1">مقاس {size} × {qty}</p>
+                    <p className="text-warm-gray text-xs mt-1">SIZE {size} × {qty}</p>
                   </div>
                   <span>{Math.round(parseFloat(product.price) * qty).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} DA</span>
                 </div>
               ))}
               <div className="border-t border-beige pt-4 flex justify-between font-semibold">
-                <span>المجموع</span>
+                <span>اTOTAL</span>
                 <span>{Math.round(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} DA</span>
               </div>
             </div>
