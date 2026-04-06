@@ -28,9 +28,7 @@ export default function CartPage() {
       </>
     );
   }
-const [shakeCart, setShakeCart] = useState(false);
-  return (
-    <>
+
       <Navbar />
       <div className="pt-32 min-h-screen max-w-7xl mx-auto px-6 pb-24">
         <h1 className="font-serif text-5xl font-light text-warm-black mb-16">Your Cart</h1>
