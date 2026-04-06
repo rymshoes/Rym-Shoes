@@ -10,9 +10,7 @@ export default function Navbar() {
   const { lang, t, toggleLang, isRTL } = useLang();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [shakeCart, setShakeCart] = useState(false);
-  return (
-    <>
+  
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
