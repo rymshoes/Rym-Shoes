@@ -62,18 +62,21 @@ export default function Navbar() {
               {lang === 'ar' ? 'FR' : 'عر'}
             </button>
             <Link href="/login" className="hidden lg:block nav-link">{t.account}</Link>
-            <Link href="/cart" className="relative p-2" aria-label="Cart">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="square">
-                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-                <line x1="3" y1="6" x2="21" y2="6"/>
-                <path d="M16 10a4 4 0 01-8 0"/>
-              </svg>
-              {count > 0 && (
-                <span className="absolute -top-0 -right-0 bg-dark-green text-cream text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
-                  {count}
-                </span>
-              )}
-            </Link>
+          <Link
+  href="/cart"
+  className={`relative ${shakeCart ? 'shake-cart' : ''}`}
+>
+  <svg width="20" height="20" viewBox="0 0 24 24">
+    ...
+  </svg>
+
+  {items.length > 0 && (
+    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-2 py-0.5">
+      {items.length}
+    </span>
+  )}
+</Link>
+
           </div>
         </div>
       </header>
