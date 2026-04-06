@@ -227,6 +227,20 @@ export default function ProductPage() {
                   : 'bg-warm-black text-cream hover:bg-dark-green'}`}
             >
               {added ? '✓ Added to Cart- تفقد السلة' : 'Add to Cart'}
+setShakeCart(true);
+
+setTimeout(() => {
+  setShakeCart(false);
+}, 3000);
+
+setTimeout(() => {
+  setShakeCart(true);
+
+  setTimeout(() => {
+    setShakeCart(false);
+  }, 3000);
+}, 4000);
+
             </button>
 
             {/* Details */}
