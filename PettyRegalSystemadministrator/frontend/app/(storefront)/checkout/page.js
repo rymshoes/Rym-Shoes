@@ -101,14 +101,14 @@ export default function CheckoutPage() {
                   <label className="block text-[9px] tracking-[0.2em] text-warm-gray mb-2">الاسم الأول</label>
                   <input
                     required name="firstName" value={form.firstName} onChange={handleChange}
-                    type="text" className="input-field" placeholder="محمد"
+                    type="text" className="input-field" placeholder="الإسم"
                   />
                 </div>
                 <div>
                   <label className="block text-[9px] tracking-[0.2em] text-warm-gray mb-2">اللقب</label>
                   <input
                     required name="lastName" value={form.lastName} onChange={handleChange}
-                    type="text" className="input-field" placeholder="بن علي"
+                    type="text" className="input-field" placeholder="إسم العائلة"
                   />
                 </div>
               </div>
