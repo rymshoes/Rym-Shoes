@@ -184,7 +184,11 @@ export default function CheckoutPage() {
             disabled={loading || items.length === 0}
             className="w-full py-4 bg-warm-black text-cream text-xs font-semibold tracking-[0.2em] hover:bg-dark-green transition-colors duration-300 disabled:opacity-50"
           >
-            {loading ? 'جاري تأكيد الطلب...' : `تأكيد الطلب — ${Math.round(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} دج`}
+            {loading ? 'جاري تأكيد الطلب...' : (
+  <>
+    تأكيد الطلب — <span dir="ltr">{Math.round(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} دج</span>
+  </>
+)}
           </button>
         </form>
 
@@ -200,7 +204,9 @@ export default function CheckoutPage() {
                     <p className="font-medium">{product.name}</p>
                     <p className="text-warm-gray text-xs mt-1">SIZE {size} × {qty}</p>
                   </div>
-                  <span>{Math.round(parseFloat(product.price) * qty).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} DA</span>
+                  <span dir="ltr">
+  {Math.round(parseFloat(product.price) * qty).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} DA
+</span>
                 </div>
               ))}
               <div className="border-t border-beige pt-4 flex justify-between font-semibold">
