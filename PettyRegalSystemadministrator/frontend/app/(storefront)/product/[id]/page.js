@@ -56,7 +56,7 @@ export default function ProductPage() {
     if (!selectedSize) { alert('Please select a size'); return; }
     addToCart(product, selectedSize, selectedColor);
     setAdded(true);
-    setTimeout(() => setAdded(false), 2000);
+    setTimeout(() => setAdded(false), 5000);
   };
 
   if (loading) {
