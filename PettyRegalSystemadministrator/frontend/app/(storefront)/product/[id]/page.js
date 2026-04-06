@@ -227,8 +227,6 @@ export default function ProductPage() {
                   : 'bg-warm-black text-cream hover:bg-dark-green'}`}
             >
               {added ? '✓ Added to Cart- تفقد السلة' : 'Add to Cart'}
-
-
             </button>
 
             {/* Details */}
