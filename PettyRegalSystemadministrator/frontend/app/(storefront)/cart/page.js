@@ -28,7 +28,7 @@ export default function CartPage() {
       </>
     );
   }
-
+const [shakeCart, setShakeCart] = useState(false);
   return (
     <>
       <Navbar />
