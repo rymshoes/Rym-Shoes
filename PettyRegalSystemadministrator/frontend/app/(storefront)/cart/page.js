@@ -27,7 +27,7 @@ export default function CartPage() {
         </div>
       ) : (
         <div className="pt-32 min-h-screen max-w-7xl mx-auto px-6 pb-24">
-          <h1 className="font-serif text-5xl font-light text-warm-black mb-16">Your Cart</h1>
+          <h1 className="font-serif text-5xl font-light text-warm-black mb-16">Your Cart-سلتك</h1>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             <div className="lg:col-span-2 space-y-8">
@@ -95,7 +95,7 @@ export default function CartPage() {
                 </div>
 
                 <div className="border-t border-beige pt-4 flex justify-between font-semibold">
-                  <span>Total</span>
+                  <span>Total-المجموع</span>
                   <span>
                     {Math.round(total).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ')} DA
                   </span>
@@ -103,11 +103,11 @@ export default function CartPage() {
               </div>
 
               <Link href="/checkout" className="block w-full text-center btn-primary">
-                Proceed to Checkout
+                Proceed to Checkout-إتمام الطلب
               </Link>
 
               <Link href="/shop" className="block text-center mt-4 text-xs tracking-widest uppercase text-warm-gray hover:text-warm-black">
-                Continue Shopping
+                Continue Shopping-متابعة التسوق
               </Link>
             </div>
           </div>
